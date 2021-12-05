@@ -1,0 +1,217 @@
+
+/*
+flexbox最強!!!!!!!!
+*/
+
+/*
+インライン要素(spanなど)は横幅と高さの指定が不可能である
+（初期値は内容で決まる）
+また、上下のmarginが指定できず、paddingはほかの要素と被る
+
+ブロックライン要素は横幅が親要素と同じになり、
+同一階層の要素と縦に並ぶ
+
+画像にwidthとheightを適用すべきではない。
+（画像サイズが環境で変わらない場合をのぞく）
+
+widthにautoを指定するとmargin, padding, borderの値にかかわらず、
+全体の幅が親要素を超えることはない。
+
+margin-left:auto;  margin-right:auto; を適用することで
+要素が水平方向に中央寄せされる(marginの初期値は0)
+
+position:relative or absolute; を設定することで、
+要素同士を重ねて配置したり、余白を無視して配置したり、
+top, ,bottom, right, leftプロパティで要素をずらせる
+absoluteで親要素を基準にして、位置を設定できる
+また、position:fixed; で固定ヘッダーなどを作れる
+
+emは親要素のフォントサイズの何倍かを示す
+
+display:inline-block; で幅と高さを指定できるインライン要素にできる
+*/
+
+body {
+    max-width: 100%;
+    overflow: hidden;
+    height: 100%;
+    font-size: 100%;
+    line-height: 170%;
+    background-color: rgb(0, 0, 0);
+    font-family: 'Ebrima';
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.root {
+    /* margin: 0 auto; */
+    /* autoで左右中央寄せ */
+    /* width: 60%; */
+    /* レスポンシブ必須(widthをvminでは無理がある？) */
+    /* height: 40vh; */
+}
+
+.screen {
+    width: 100%;
+    border-top: 1px solid rgb(114, 236, 240);
+    border-bottom: 1px solid rgba(114, 236, 240);
+    margin-top: 4%;
+    margin-bottom: 5vh;
+    padding-top: 10%;
+    padding-bottom: 4%;
+}
+
+.screen-box {
+    width: 60%;
+    margin: 0 auto;
+    padding-left: 8%;
+    font-size: 3vw;
+}
+
+.standby-char {
+    color: rgba(255, 255, 255, 0.842);
+}
+
+.current-char {
+    background-color: rgb(86, 200, 204);
+}
+
+.finished-char {
+    color: rgb(114, 236, 240);
+}
+
+.status-bar {
+	margin-left: 35%;
+	color: rgb(0, 247, 255);
+	text-align: center;
+	margin-bottom: 4vh;
+}
+
+.timer{
+	color: rgb(255, 255, 255);
+    	font-size: 3vw;
+	margin-right: 10%;
+}
+
+.word-number {
+	font-size: 2vw;
+}
+
+.keyboard{
+    margin : 0 auto;
+    /* 中央寄せ */
+    width: 80%;
+}
+
+.keyboard-box {
+    margin: 0 auto;
+    width: 75%;
+}
+
+.keyboard-line {
+    display: flex;
+    justify-content: flex-start;
+    padding :0 3%;
+}
+
+.line-2 {
+    margin-left: 2vw;
+}
+
+.line-3 {
+    margin-left: 4vw;
+}
+
+.line-4 {
+    margin-left: 7.5vw;
+}
+
+.key {
+    border: 1px solid rgb(0, 247, 255);
+    color: rgb(0, 247, 255);
+    font-size: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4vw;
+}
+
+.squarekey{
+    width: 4vw;
+    /* padding: 0 auto; */
+    /* paddinの値を%で指定すると、親要素のwidthが基準となる */
+    /* margin: 0 0.2%;  上下　左右*/
+}
+
+.shiftkey {
+    width: 8vw;
+}
+
+.spacekey {
+    margin: 0 auto;
+    width: 20vw;
+}
+
+.pressing {
+    color: rgb(0, 0, 0);
+    background-color: rgb(0, 247, 255);
+}
+
+.ispressed {
+    color: rgb(0, 0, 0);
+    background-color: rgb(0, 117, 121);
+}
+
+.modal {
+	position: absolute;	
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+    	color: rgb(0, 247, 255);
+	background-color: rgb(0, 0, 0);
+    	border: 1px solid rgb(0, 247, 255);
+}
+
+.modal-content {
+	text-align: center;
+}
+
+.start-modal {
+	width: 35vw;
+	height: 10vw;
+
+}
+
+.start-text {
+	font-size: 2.5vw;
+}
+
+.flash-text {
+	font-size: 1.5vw;
+}
+
+.countdown {
+	font-size: 4vw;
+}
+
+
+.result-modal {
+	color: rgb(255, 255, 255);
+	width: 40vw;
+	height: 35vw;
+	font-size: 2vw;
+}
+
+.result-title {
+	font-size: 3vw;
+	margin-bottom: 15%;
+}
+
+

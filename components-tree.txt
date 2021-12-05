@@ -1,0 +1,12 @@
+<TypingGame>
+	<Screen>
+		<StringToBeTyped>
+	<Timer>
+	<TypingProgress>
+	<Keyboard>
+		<SquareKey>
+		<ShiftKey>
+		<SpaceKey>
+	<StartModal>
+	<ResultModal>
+
