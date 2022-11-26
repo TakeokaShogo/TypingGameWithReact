@@ -1,4 +1,8 @@
 # Typing game using React
+<br>
+
+![ss1](ss1.png)
+![ss2](ss2.png)
 
 React学習のためにブラウザで遊べるタイピングゲームを作成しました。(hooksを使用しておりません)
 
